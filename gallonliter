@@ -1,0 +1,29 @@
+/*                                                                                                                     
+  Name: David Lanade
+  Uindy E-mail: lanaded@uindy.edu
+  Class: CSCI 155
+  Assignment Name: Main Test
+  Date: 02/14/2019
+  Desc: To convert gallons to liters
+  Filename: gallonliter.c
+  To compile , type this, gcc filename.c 
+  To compile , type this, ./a.out
+*/
+   
+ #include <stdio.h> 
+ 
+ int main()
+{
+     const double gallon_liter = 3.785; // store constant variable
+     double gallon; // store variable gallon
+     double liter; // store variable liter
+     
+     printf("Enter number of gallons\n"); // prompting user to enter number of gallons he wants to convert
+     scanf("%lf", &gallon); // read input from user
+     
+     liter = gallon * gallon_liter; // converts gallons to liter by multiplying by the constant variable
+     
+     printf("%.0lf gallons is: %.3lf liters\n", gallon, liter); // printing liters in three decimal points
+     
+     return 0;
+}
