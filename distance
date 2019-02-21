@@ -1,0 +1,36 @@
+/*                                                                                                                     
+  Name: David Lanade
+  Class: CSCI 155
+  Date: 01/30/2019
+  Desc: To get the distance ‘d’ between two points(x1,y1) and (x2,y2)
+  Filename: distance_david.c
+  To compile , type this, gcc filename.c -lm
+  To compile , type this, ./a.out
+*/
+
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+   double x1; // first x coordinate
+   double y1; // first y coordinate
+   double x2; // second x coordinate
+   double y2; // second y coordinate
+   double pointsDistance; // distance between the two points
+   
+   printf("enter x1 "); // enter first x coordinate
+   scanf("%lf", &x1);   
+   printf("enter y1 "); // enter first y coordinate
+   scanf("%lf", &y1);   
+   printf("enter x2 "); // enter second x coordinate
+   scanf("%lf", &x2);
+   printf("enter y2 "); // enter second y coordinate
+   scanf("%lf", &y2);
+   
+   pointsDistance = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2)); // Calculating the distance between the said points
+   
+   printf("%lf is the distance between the two points (%lf, %lf), (%lf, %lf)", pointsDistance, x1, y1, x2, y2);
+   printf("\n");
+   return 0;
+  
+}
