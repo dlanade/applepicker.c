@@ -1,0 +1,110 @@
+/*                                                                                                                     
+  Name: David Lanade
+  Uindy E-mail: lanaded@uindy.edu
+  Class: CSCI 155
+  Assignment Name: Main Test
+  Date: 02/21/2019
+  Desc: If-If else-else statements
+  Filename: rpg1.c
+  To compile , type this, gcc filename.c 
+  To compile , type this, ./a.out
+*/
+   
+ #include <stdio.h> 
+ 
+ int main() {
+     
+      char freeDoughnuts[4];
+      int life = 100;
+      char freeApples[4];
+      float gpa = 3.0;
+      char firstClass[4];
+      char secondClass[4];
+      
+      printf("Welcome to UIndy RPG!\n");
+      printf("You are standing in front of Schwitzer\n");
+      printf("Do you want a free doughnut?\n");
+      printf("Enter Yes or No\n");
+      scanf("%s", freeDoughnuts);
+      
+      if (strcmp(freeDoughnuts, "Yes") == 0){ // condition if you want free doughnuts
+         life = 10 + life;
+         printf("You got the doughnuts and got 10 life\n");
+         printf("Life now: %d\n", life);
+         printf("Do you want free apples?\n");
+         printf("Enter Yes or No\n");
+         scanf("%s", freeApples);
+          
+          if (strcmp(freeApples, "Yes") == 0){ // condition if you want free apples 
+            life = 10 + life;
+            printf("You got the apples and got 10 life\n");
+            printf("Life now: %d\n", life);
+            printf("Do you want to get a first class?\n");
+            printf("Enter Yes or No\n");
+            scanf("%s", firstClass);
+             
+             if (strcmp(firstClass, "Yes") == 0){ // condition of you want first class 
+                gpa = gpa + 0.2;
+                printf("Your Gpa is %.1lf\n", gpa);
+   }
+             else if (strcmp(firstClass, "No") == 0){ // condition if you don't want first class
+                printf("Your Gpa is %.1lf\n", gpa);
+   }
+   }
+          else if(strcmp(freeApples, "No") == 0){ // condition if you don't want free apples
+            printf("You got no extra life\n");
+            printf("Life now: %d\n", life);
+            printf("Do you want to get a first class?\n");
+            printf("Enter Yes or No\n");
+            scanf("%s", firstClass);
+             
+             if (strcmp(firstClass, "Yes") == 0){ // condition if you want first class
+                gpa = gpa + 0.2;
+                printf("Your Gpa is %.1lf\n", gpa);
+   }
+             else if (strcmp(firstClass, "No") == 0){ // condition if you don't want first class
+                printf("Your Gpa is %.1lf\n", gpa);
+   }
+   }
+   }
+          else if (strcmp(freeDoughnuts, "No") == 0){ // condition if you don't want free doughnuts
+            printf("You got no extra life\n");
+            printf("Life now: %d\n", life);
+            printf("Do you want free apples?\n");
+            printf("Enter Yes or No\n");
+            scanf("%s", freeApples);
+        
+          if (strcmp(freeApples, "Yes") == 0){ // condition if you want free apples
+            life = 10 + life;
+            printf("You got the apples and got 10 life\n");
+            printf("Life now: %d\n", life);
+            printf("Do you want to get a first class?\n");
+            printf("Enter Yes or No\n");
+            scanf("%s", firstClass);
+             
+             if (strcmp(firstClass, "Yes") == 0){ // condition if you want first class
+                 gpa = gpa + 0.2;
+                 printf("Your Gpa is %.1lf\n", gpa);
+   }
+             else if (strcmp(firstClass, "No") == 0){ // condition if you don't want first class
+               printf("Your Gpa is %.1lf\n", gpa);
+   }
+   }
+          else if(strcmp(freeApples, "No") == 0){ // condition if you don't want free apples
+            printf("You got no extra life\n");
+            printf("Life now: %d\n", life);
+            printf("Do you want to get a first class?\n");
+            printf("Enter Yes or No\n");
+            scanf("%s", firstClass); 
+             
+             if (strcmp(firstClass, "Yes") == 0){ // condition if you want first class
+                gpa = gpa + 0.2;
+                printf("Your Gpa is %.1lf\n", gpa);
+   }
+             else if (strcmp(firstClass, "No") == 0){ // condition if you don't want first class
+                printf("Your Gpa is %.1lf\n", gpa);
+   }
+   }
+   }
+      return 0;
+}
