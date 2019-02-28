@@ -1,0 +1,79 @@
+/*                                                                                                                     
+  Name: David Lanade
+  Uindy E-mail: lanaded@uindy.edu
+  Class: CSCI 155
+  Assignment Name: Lab Assignment
+  Date: 02/28/2019
+  Desc: While and for Loops
+  Filename: loop.c
+  To compile , type this, gcc filename.c 
+  To compile , type this, ./a.out
+*/
+#include <stdio.h> 
+ 
+int main()
+{
+       int horizontalLine;    // Storing User Input
+       int sos;
+       int range;
+       int Exit;
+       int task;
+       int x; 
+       int y;
+       int num1;
+       int num2;
+       int i;
+   
+   
+       printf("1. Horizontal line\n2. SOS\n3. Range\n4. Exit\n");         // displaying menu and gets task from user
+       printf("What task would you like to do?\nChoose from 1 to 4\n");
+       scanf("%d", &task);
+   
+       if(task == 1) {
+            printf("What is the Width of the Line\n");        // Carrying out task 1
+            scanf("%d", &horizontalLine);
+                if(horizontalLine < 0) {
+                    printf("Negative width doesn't make sense! Try again:\n");
+                    scanf("%d", &horizontalLine);
+                }
+                    x = 0;
+                        while(horizontalLine > x) {
+                            printf("*");
+                            x = x + 1;
+                        }
+                            printf(" \n");
+                            printf("1. Horizontal line\n2. SOS\n3. Range\n4. Exit\n");
+                            printf("What task would you like to do?\nChoose from 1 to 4\n");
+                            scanf("%d", &task);
+        }
+       if(task == 2) {
+            printf("How many?\n");
+            scanf("%d", &sos);
+                if(sos < 0) {                                                 // carrying out task 2
+                    printf("Negative doesn't make sense! Try again:\n");
+                    scanf("%d", &sos);
+                }
+                        for(y = 0; y < sos; y = y + 1) {
+                            printf("...---... ");
+                        }
+                            printf(" \n");
+                            printf("1. Horizontal line\n2. SOS\n3. Range\n4. Exit\n");
+                            printf("What task would you like to do?\nChoose from 1 to 4\n");
+                            scanf("%d", &task);
+       }
+       if(task == 3) {
+            printf("Enter two values\n");
+            scanf("%d  %d", &num1, &num2);
+                for(i = num1; i <= num2; ++i) {
+                    printf("%d", i);
+                }
+                    printf(" \n");                                                       // carrying out task 3
+                    printf("1. Horizontal line\n2. SOS\n3. Range\n4. Exit\n");
+                    printf("What task would you like to do?\nChoose from 1 to 4\n");
+                    scanf("%d", &task);
+       }
+       if(task == 4) {
+            printf("End\n");      // carrying out task 4
+       }
+       return 0;
+}
