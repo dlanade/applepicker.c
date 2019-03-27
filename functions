@@ -1,0 +1,31 @@
+#include<stdio.h>
+add(int a, int b){
+    int c;
+    c = a + b;
+    printf("%d + %d = %d\n", a, b, c);
+}
+sub(int a, int b){
+    int c;
+    c = a - b;
+    printf("%d - %d = %d\n", a, b, c);
+}
+int main(){
+    int a;
+    int b;
+    int i;
+    printf("What do you want to do?... choose between 1 and 2\n");
+    scanf("%d", &i);
+    if(i == 1){
+    printf("What numbers do you want to add?\n");
+    scanf("%d", &a);
+    scanf("%d", &b);
+    add(a, b);
+    }
+    if(i == 2){
+    printf("What numbers do you want to subtract?\n");
+    scanf("%d", &a);
+    scanf("%d", &b);
+    sub(a, b);   
+    }
+    return 0;
+}
